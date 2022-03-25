@@ -1,11 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tweet_sweep will SEARCH and FILTER tweets quickly and allow the user to DELETE these tweets.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version:
+    - 2.6.6
+
+* Rails version:
+    - 5.2.7
 
 * System dependencies
 
