@@ -11,7 +11,7 @@
   </head>
 
   <body class='bg-dark'>
-    <%= render partial: 'layouts/header' %>
+    <%= render partial: 'layouts/header', locals: {user: @user} %>
       <div class='container bg-dark'>
         <div class='row'>
           <div class='col-sm-12 pt-4'>
