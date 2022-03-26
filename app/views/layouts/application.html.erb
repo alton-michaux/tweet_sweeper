@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TweetSweeper</title>
+    <title>RedditClone</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='bg-dark'>
+    <%= render partial: 'layouts/header' %>
+      <div class='container bg-dark'>
+        <div class='row'>
+          <div class='col-sm-12 pt-4'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>
