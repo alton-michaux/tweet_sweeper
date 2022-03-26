@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # root 'pages/index','pages#index'
+  root 'users#index'
   resources :users
   resources :tweets
   resources :profiles
