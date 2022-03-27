@@ -11,14 +11,20 @@
   </head>
 
   <body class='bg-dark'>
-    <%= render partial: 'layouts/header', locals: {user: @user} %>
-      <div class='container bg-dark'>
-        <div class='row'>
-          <div class='col-sm-12 pt-4'>
-            <%= yield %>
-          </div>
+    <%= render partial: 'layouts/header' %>
+    <div class='container bg-dark'>
+      <div class='row'>
+        <div class='col-sm-12 pt-4'>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+          <%= yield %>
         </div>
       </div>
+    </div>
     <%= render partial: 'layouts/footer' %>
   </body>
 </html>
