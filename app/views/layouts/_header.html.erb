@@ -1,12 +1,14 @@
 <div class='container'>
 	<div class='row'>
-		<div class='col-12'>
-			<div class='float-start'>
+		<div>
+			<div class='float-start col-6'>
+				<% if request.path != root_path %>
+					<%= link_to 'Home', root_path, class: 'btn btn-primary' %>
+				<% end %>
 				<%= link_to 'Profiles', profiles_path, class: 'btn btn-primary' %>
 				<%= link_to 'Tweets', tweets_path, class: 'btn btn-primary' %>
 			</div>
-			<div>
-				<p><%= link_to 'TweetSweeper', root_path, class: 'navbar-brand text-light text-decoration-none' %></p>
+			<div class='float-end col-6'>
 				<p class="navbar-text float-right">
 				<% if user_signed_in? %>
 					Logged in as <strong><%= current_user.email %></strong>.
